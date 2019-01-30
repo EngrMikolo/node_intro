@@ -4,6 +4,8 @@ var square = require('./square'); // Here we require() the name of the file with
 console.log('The area of a square with a width of 4 is ' + square.area(4));
 var area  = square.area(4);
 
+const port = process.env.PORT || 3000;
+
 app.get('/', function(req, res) {
   res.send('Hello World! the area of square with a width of 4 is'+ area);
 });
@@ -12,6 +14,6 @@ setTimeout(function() {
    }, 3000);
 console.log('Second');
 
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function() {
+  console.log('Example app listening on port '+ port);
 });
